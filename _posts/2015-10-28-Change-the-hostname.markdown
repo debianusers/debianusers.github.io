@@ -4,11 +4,11 @@ title: "systemd에서 호스트네임(hostname) 변경"
 author: Westporch
 ---
 
-systemd에서 호스트네임(hostname) 변경
+1.systemd에서 호스트네임(hostname) 변경
 ======================================
 
 
-systemd 버전 확인
+1-(1).systemd 버전 확인
 -----------------
 systemd에서 hostname을 변경하기 위해서 hostnamectl 명령어를 사용합니다.
 
@@ -36,7 +36,7 @@ root@localhost:/home/westporch# hostnamectl
 root@localhost:/home/westporch# 
 {% endhighlight %}
 
-hostname 변경
+1-(2).hostname 변경
 --------------
 ***hostnamectl set-hostname --static '변경할_호스트네임'***으로 hostname을 변경합니다.
 {% highlight ruby %}
@@ -44,7 +44,7 @@ root@localhost:/home/westporch# hostnamectl set-hostname --static HelloWorld
 root@localhost:/home/westporch#
 {% endhighlight %}
 
-변경된 hostname 확인
+1-(3).변경된 hostname 확인
 ---------------------
 ***hostnamectl*** 명령을 통해 hostname이 변경되었는지 확인합니다.
 
@@ -67,7 +67,7 @@ root@localhost:/home/westporch#
 root@localhost:/home/westporch# reboot
 {% endhighlight %}
 
-리부팅 후 프롬프트에 hostname이 HelloWorld로 출력되었습니다.
+리부팅 후 프롬프트에서도 hostname이 HelloWorld로 변경되었습니다.
 {% highlight ruby %}
 root@HelloWorld:/home/westporch# 
 {% endhighlight %}
