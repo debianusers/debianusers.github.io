@@ -19,7 +19,7 @@ root@localhost:/home/westporch#
 hostnamectl 명령어를 통해 현재 호스트네임을 확인할 수 있습니다.
 
 ***Static hostname: localhost***
-{% highlight bash %}
+{% highlight sh %}
 root@localhost:/home/westporch# hostnamectl 
    Static hostname: localhost
          Icon name: computer-laptop
