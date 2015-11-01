@@ -11,6 +11,7 @@ systemd에서 호스트네임(hostname) 변경
 systemd 버전 확인
 -----------------
 systemd에서 hostname을 변경하기 위해서 hostnamectl 명령어를 사용합니다.
+
 hostnamectl은 systemd에 포함된 명령어입니다.
 {% highlight ruby %}
 root@localhost:/home/westporch# hostnamectl --version
@@ -20,6 +21,7 @@ root@localhost:/home/westporch#
 {% endhighlight %}
 
 hostnamectl 명령어를 통해 현재 호스트네임을 확인할 수 있습니다.
+
 ***Static hostname: localhost***
 {% highlight ruby %}
 root@localhost:/home/westporch# hostnamectl 
@@ -45,6 +47,7 @@ root@localhost:/home/westporch#
 변경된 hostname 확인
 ---------------------
 ***hostnamectl*** 명령을 통해 hostname이 변경되었는지 확인합니다.
+
 hostname이 HelloWorld로 변경되었습니다.
 {% highlight ruby %}
 root@localhost:/home/westporch# hostnamectl
