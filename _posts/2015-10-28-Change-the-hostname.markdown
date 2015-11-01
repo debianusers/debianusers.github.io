@@ -4,10 +4,6 @@ title: "systemd에서 호스트네임(hostname) 변경"
 author: Westporch
 ---
 
-1.systemd에서 호스트네임(hostname) 변경
-======================================
-
-
 1-(1).systemd 버전 확인
 -----------------
 systemd에서 hostname을 변경하기 위해서 hostnamectl 명령어를 사용합니다.
