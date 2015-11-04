@@ -5,7 +5,7 @@ author: Westporch
 email: westporch@gmail.com
 ---
 
-1. 설치
+1.설치
 -------
 
 ***tree***를 프롬프트에 입력해서 ***tree*** 명령어가 존재하는지 확인합니다.
@@ -39,6 +39,8 @@ tree (1.7.0-3) 설정하는 중입니다 ...
 root@localhost:/home/westporch# 
 {% endhighlight %}
 
+2.tree 명령어 사용
+------------------
 
 ***tree*** 명령어만 입력하면 현재 디렉토리의 tree를 확인합니다.
 {% highlight bash %}
