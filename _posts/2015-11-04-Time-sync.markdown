@@ -7,7 +7,7 @@ author: <a href="mailto:westporch@gmail.com">Westporch</a>
 rdate
 -----------------
 
-시스템의 날짜와 시간이 아래와 같이 제대로 출력되지 않습니다.
+시스템의 날짜와 시간이 현재 시간과 동일하지 않습니다.
 {% highlight ruby %}
 root@localhost:/home/westporch# date
 2011. 11. 11. (금) 11:11:11 KST
