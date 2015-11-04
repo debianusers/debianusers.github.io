@@ -4,8 +4,8 @@ title: "시간 동기화 (Time synchronization)"
 author: <a href="mailto:westporch@gmail.com">Westporch</a>
 ---
 
-rdate
------------------
+rdate를 이용한 시간 동기화
+--------------------------
 
 시스템의 날짜와 시간이 현재 시간과 동일하지 않습니다.
 {% highlight ruby %}
