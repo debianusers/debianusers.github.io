@@ -9,6 +9,7 @@ email: westporch@gmail.com
 -------
 
 ***tree***를 프롬프트에 입력해서 ***tree*** 명령어가 존재하는지 확인합니다.
+
 ***tree*** 명령어가 존재하지 않으니 ***tree***를 설치해야합니다.
 {% highlight ruby %}
 root@localhost:/home/westporch# tree
@@ -17,7 +18,7 @@ root@localhost:/home/westporch#
 {% endhighlight %}
 
 ***apt-get install tree*** 명령어로 설치합니다. 
-{% highlight ruby %}
+{% highlight bash %}
 root@localhost:/home/westporch# apt-get install tree
 패키지 목록을 읽는 중입니다... 완료
 의존성 트리를 만드는 중입니다       
@@ -40,7 +41,7 @@ root@localhost:/home/westporch#
 
 
 ***tree*** 명령어만 입력하면 현재 디렉토리의 tree를 확인합니다.
-{% highlight ruby %}
+{% highlight bash %}
 root@localhost:/home/westporch/R# tree
 .
 ├── graph.R
@@ -59,7 +60,7 @@ root@localhost:/home/westporch/R#
 {% endhighlight %}
 
 ***tree '조회할 디렉토리 경로'***를 입력하면 특정 디렉토리의 tree를 조회합니다.
-{% highlight ruby %}
+{% highlight python %}
 root@localhost:/home/westporch# tree /tmp
 /tmp
 ├── akonadi-westporch.E1i1Yk
