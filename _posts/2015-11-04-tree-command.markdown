@@ -11,7 +11,7 @@ email: westporch@gmail.com
 ***tree***를 프롬프트에 입력해서 ***tree*** 명령어가 존재하는지 확인합니다.
 
 ***tree*** 명령어가 존재하지 않으니 ***tree***를 설치해야합니다.
-{% highlight ruby %}
+{% highlight bash %}
 root@localhost:/home/westporch# tree
 bash: tree: command not found
 root@localhost:/home/westporch#
@@ -62,7 +62,7 @@ root@localhost:/home/westporch/R#
 {% endhighlight %}
 
 ***tree '조회할 디렉토리 경로'***를 입력하면 특정 디렉토리의 tree를 조회합니다.
-{% highlight python %}
+{% highlight bash %}
 root@localhost:/home/westporch# tree /tmp
 /tmp
 ├── akonadi-westporch.E1i1Yk
