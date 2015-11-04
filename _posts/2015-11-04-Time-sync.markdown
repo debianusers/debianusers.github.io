@@ -20,7 +20,38 @@ root@localhost:/home/westporch# rdate -s time.bora.net
 root@localhost:/home/westporch#
 {% endhighlight %}
 
-정상적으로 날짜와 시간이 출력됩니다.
+만약 아래와 같이 rdate 명령어가 없다면 
+{% highlight ruby %}
+root@localhost:/home/westporch# rdate -s time.bora.net
+bash: rdate: command not found
+root@localhost:/home/westporch# 
+{% endhighlight %}
+
+***apt-get install rdate*** 명령으로 rdate를 설치합니다.
+{% highlight ruby %}
+root@localhost:/home/westporch# apt-get install rdate
+패키지 목록을 읽는 중입니다... 완료
+의존성 트리를 만드는 중입니다       
+상태 정보를 읽는 중입니다... 완료
+다음 새 패키지를 설치할 것입니다:
+  rdate
+0개 업그레이드, 1개 새로 설치, 0개 제거 및 84개 업그레이드 안 함.
+15.4 k바이트 아카이브를 받아야 합니다.
+이 작업 후 28.7 k바이트의 디스크 공간을 더 사용하게 됩니다.
+받기:1 http://ftp.daum.net/debian/ jessie/main rdate i386 1:1.2-6 [15.4 kB]
+내려받기 15.4 k바이트, 소요시간 0초 (54.1 k바이트/초)
+Selecting previously unselected package rdate.
+(데이터베이스 읽는중 ...현재 133494개의 파일과 디렉터리가 설치되어 있습니다.)
+Preparing to unpack .../rdate_1%3a1.2-6_i386.deb ...
+Unpacking rdate (1:1.2-6) ...
+Processing triggers for man-db (2.7.0.2-5) ...
+rdate (1:1.2-6) 설정하는 중입니다 ...
+root@localhost:/home/westporch#
+{% endhighlight %}
+
+***rdate***가 설치된 후에 ***rdate -s time.bora.net***을 입력하면
+
+정상적으로 날짜와 시간이 설정됩니다.
 {% highlight ruby %}
 root@localhost:/home/westporch# date
 2015. 11. 04. (수) 23:43:07 KST
