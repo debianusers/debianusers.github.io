@@ -1,7 +1,7 @@
 ---                                   
 layout: post
 title: "시간 동기화 (Time synchronization)" 
-author: Westporch <westporch@gmail.com>
+author: <a href="mailto:westporch@gmail.com">Westporch</a>
 ---
 
 rdate
