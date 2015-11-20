@@ -24,11 +24,7 @@ root@localhost:/home/westporch#
 
 ***localectl set-locale LANG='변경할 내용'***으로 locale을 변경합니다.
 
-***ko_KR.UTF-8***을 ***en_GB.utf8***로 변경하겠습니다.
-
-***localectl set-locale LANG=en_GB.utf8***을 입력합니다.
-
-System Locale이 ***en_GB.utf8***로 변경되었습니다.
+***localectl set-locale LANG=en_GB.utf8***을 입력합니다. (***ko_KR.UTF-8***을 ***en_GB.utf8***로 변경)
 
 {% highlight ruby %}
 root@localhost:/home/westporch# localectl set-locale LANG=en_GB.utf8
@@ -40,3 +36,5 @@ root@localhost:/home/westporch# localectl
      X11 Variant: kr104
 root@localhost:/home/westporch#
 {% endhighlight %}
+
+System Locale이 ***en_GB.utf8***로 변경되었습니다.
