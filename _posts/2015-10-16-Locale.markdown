@@ -22,7 +22,7 @@ root@localhost:/home/westporch#
 2.locale 변경
 -------------
 
-*localectl set-locale LANG='변경할 내용'*으로 locale을 변경합니다.
+**localectl set-locale LANG='변경할 내용'**으로 locale을 변경합니다.
 
 *ko_KR.UTF-8을 en_GB.utf8*로 변경하겠습니다.
 
