@@ -1,0 +1,94 @@
+---     
+layout: post
+title: "부팅 시간(Boot time) 확인하기" 
+author: <a href="mailto:westporch@gmail.com">Westporch</a>
+---
+
+1.부팅 시간 확인
+---------------------
+
+_systemd-analyze time_
+
+{% highlight ruby %}
+root@localhost:/home/westporch# systemd-analyze time
+Startup finished in 2.217s (kernel) + 1.661s (userspace) = 3.878s
+root@localhost:/home/westporch# 
+{% endhighlight %}
+
+
+2.서비스별 부팅 시간 확인
+-------------------------
+
+_systemd-analyze blame_
+
+{% highlight ruby %}
+root@localhost:/home/westporch# systemd-analyze blame
+           870ms networking.service
+           719ms kbd.service
+           262ms exim4.service
+           201ms NetworkManager.service
+           176ms keyboard-setup.service
+           171ms ModemManager.service
+           126ms packagekit.service
+           123ms console-setup.service
+           119ms systemd-logind.service
+            86ms alsa-restore.service
+            85ms openvpn.service
+            81ms nfs-common.service
+            81ms pppd-dns.service
+            79ms rc-local.service
+            77ms sysstat.service
+            77ms speech-dispatcher.service
+            70ms avahi-daemon.service
+            59ms systemd-tmpfiles-clean.service
+            37ms systemd-tmpfiles-setup.service
+            34ms udisks2.service
+            33ms rpcbind.service
+            30ms systemd-journal-flush.service
+            27ms dev-disk-by\x2duuid-4bfba35d\x2daebb\x2d4134\x2dae3c\x2d467dd2e5ef4b.swap
+            27ms rsyslog.service
+            24ms systemd-rfkill@rfkill0.service
+            22ms rtkit-daemon.service
+            20ms systemd-udev-trigger.service
+            19ms upower.service
+            19ms polkitd.service
+            19ms kdm.service
+            18ms user@1000.service
+            18ms systemd-tmpfiles-setup-dev.service
+            13ms systemd-setup-dgram-qlen.service
+            13ms dev-hugepages.mount
+            12ms systemd-rfkill@rfkill1.service
+            12ms systemd-remount-fs.service
+            12ms systemd-user-sessions.service
+            12ms saned.service
+            12ms systemd-backlight@leds:samsung::kbd_backlight.service
+            11ms sys-kernel-debug.mount
+            10ms systemd-random-seed.service
+            10ms systemd-sysctl.service
+            10ms systemd-modules-load.service
+             9ms systemd-update-utmp.service
+             7ms dev-mqueue.mount
+             7ms systemd-backlight@backlight:intel_backlight.service
+             7ms systemd-update-utmp-runlevel.service
+             5ms kmod-static-nodes.service
+             3ms sys-fs-fuse-connections.mount
+             3ms systemd-udevd.service
+             1ms systemd-rfkill@rfkill2.service
+             1ms udev-finish.service
+root@localhost:/home/westporch# 
+{% endhighlight %}
+
+
+3.부팅 과정을 이미지로 저장
+--------------------------
+
+_systemd_analyze plot > boot.svg_
+
+{% highlight ruby %}
+root@localhost:/home/westporch# systemd-analyze plot > boot.svg
+root@localhost:/home/westporch# 
+root@localhost:/home/westporch# ls
+Bechmark  Downloads  Git  R         imgs  systemd_txt  test    공개      문서      비디오  서식
+CentOS    Gisa       PDF  boot.svg  make  temp         upload  다운로드  바탕화면  사진    음악
+root@localhost:/home/westporch#
+{% endhighlight %}
