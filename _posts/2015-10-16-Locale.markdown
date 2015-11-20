@@ -1,0 +1,42 @@
+---           
+layout: post
+title: "System locale 변경" 
+author: <a href="mailto:westporch@gmail.com">Westporch</a>
+---
+
+1.현재 locale 확인
+-----------------
+
+_localectl_ 명령어로 현재 locale을 확인할 수 있습니다.
+
+{% highlight ruby %}
+root@localhost:/home/westporch# localectl
+   System Locale: LANG=ko_KR.UTF-8
+       VC Keymap: n/a
+      X11 Layout: kr
+       X11 Model: pc105
+     X11 Variant: kr104
+root@localhost:/home/westporch#
+{% endhighlight %}
+
+2.locale 변경
+-------------
+
+_localectl set-locale LANG='변경할 내용'_으로 locale을 변경합니다.
+
+ko_KR.UTF-8을 en_GB.utf8로 변경하겠습니다.
+
+localectl set-locale LANG=en_GB.utf8을 입력합니다.
+
+System Locale이 en_GB.utf8로 변경되었습니다.
+
+{% highlight ruby %}
+root@localhost:/home/westporch# localectl set-locale LANG=en_GB.utf8
+root@localhost:/home/westporch# localectl
+   System Locale: LANG=en_GB.utf8
+       VC Keymap: n/a
+      X11 Layout: kr
+       X11 Model: pc105
+     X11 Variant: kr104
+root@localhost:/home/westporch#
+{% endhighlight %}
