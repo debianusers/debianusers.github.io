@@ -1,0 +1,26 @@
+---                               
+layout: post
+title: "리눅스 CLI 계산기 bc" 
+author: <a href="mailto:westporch@gmail.com">Westporch</a>
+---
+
+1.16진수를 10진수로 변환하기
+---------------------------
+
+{% highlight ruby %}
+root@localhost:/home/westporch# bc
+bc 1.06.95
+Copyright 1991-1994, 1997, 1998, 2000, 2004, 2006 Free Software Foundation, Inc.
+This is free software with ABSOLUTELY NO WARRANTY.
+For details type `warranty'. 
+
+#아래 내용을 입력하여 10진수를 16진수로 변환합니다. (#은 주석을 의미합니다.)
+obase=10    #출력값은 10진수
+ibase=16    #입력값은 16진수
+21C         /*입력값은 16진수 21C (C는 반드시 대문자로 입력해야 합니다.)
+              10진수로 변환한 결과(10진수 256)는 아래 행에 출력됩니다.)
+            */
+540
+quit        #bc를 종료합니다.
+root@localhost:/home/westporch#
+{% endhighlight %}
