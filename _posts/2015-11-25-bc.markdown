@@ -7,7 +7,7 @@ author: <a href="mailto:westporch@gmail.com">Westporch</a>
 1.16진수를 10진수로 변환하기
 ---------------------------
 
-{% highlight ruby %}
+{% highlight sh %}
 root@localhost:/home/westporch# bc
 bc 1.06.95
 Copyright 1991-1994, 1997, 1998, 2000, 2004, 2006 Free Software Foundation, Inc.
