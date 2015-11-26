@@ -4,7 +4,7 @@ title: "ssh - WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED! 해결 방법"
 author: <a href="mailto:westporch@gmail.com">Westporch</a>
 ---
 
-ssh 접속시 *WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!*가 발생할 때가 있습니다.
+ssh 접속시 **WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!**가 발생할 때가 있습니다.
 
 {% highlight sh %}
 root@localhost:/home/westporch# ssh 10.0.11.244
@@ -27,7 +27,7 @@ root@localhost:/home/westporch#
 
 1.해결 방법
 ------------
-*ssh-keygen -R '접속할 주소'*를 입력합니다.
+**ssh-keygen -R '접속할 주소'**를 입력합니다.
 
 {% highlight sh %}
 root@localhost:/home/westporch# ssh-keygen -R 10.0.11.244
@@ -37,7 +37,7 @@ Original contents retained as /root/.ssh/known_hosts.old
 root@localhost:/home/westporch#
 {% endhighlight %}
 
-*ssh '접속할 주소'*를 입력해서 다시 ssh 접속을 시도합니다. 이때 yes를 입력합니다.
+**ssh '접속할 주소'**를 입력해서 다시 ssh 접속을 시도합니다. 이때 yes를 입력합니다.
 
 아래 화면과 같이 다시 접속이 가능해졌습니다.
 {% highlight sh %}
