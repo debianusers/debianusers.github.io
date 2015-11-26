@@ -1,0 +1,164 @@
+---                               
+layout: post
+title: "hdparm 명령어로 디스크 정보 조회" 
+author: <a href="mailto:westporch@gmail.com">Westporch</a>
+---
+
+1.hdparm 설치
+-------------
+
+**apt-get install hdparm**
+
+{% highlight sh %}
+root@localhost:/home/westporch# apt-get install hdparm
+패키지 목록을 읽는 중입니다... 완료
+의존성 트리를 만드는 중입니다       
+상태 정보를 읽는 중입니다... 완료
+다음 패키지를 더 설치할 것입니다:
+  powermgmt-base
+제안하는 패키지:
+  apmd
+다음 새 패키지를 설치할 것입니다:
+  hdparm powermgmt-base
+0개 업그레이드, 2개 새로 설치, 0개 제거 및 84개 업그레이드 안 함.
+118 k바이트 아카이브를 받아야 합니다.
+이 작업 후 263 k바이트의 디스크 공간을 더 사용하게 됩니다.
+계속 하시겠습니까? [Y/n] y
+받기:1 http://ftp.daum.net/debian/ jessie/main hdparm i386 9.43-2 [109 kB]
+받기:2 http://ftp.daum.net/debian/ jessie/main powermgmt-base all 1.31+nmu1 [9,240 B]
+내려받기 118 k바이트, 소요시간 11초 (10.3 k바이트/초)
+Selecting previously unselected package hdparm.
+(데이터베이스 읽는중 ...현재 133704개의 파일과 디렉터리가 설치되어 있습니다.)
+Preparing to unpack .../hdparm_9.43-2_i386.deb ...
+Unpacking hdparm (9.43-2) ...
+Selecting previously unselected package powermgmt-base.
+Preparing to unpack .../powermgmt-base_1.31+nmu1_all.deb ...
+Unpacking powermgmt-base (1.31+nmu1) ...
+Processing triggers for systemd (215-17+deb8u1) ...
+Processing triggers for man-db (2.7.0.2-5) ...
+hdparm (9.43-2) 설정하는 중입니다 ...
+update-rc.d: warning: start and stop actions are no longer supported; falling back to defaults
+powermgmt-base (1.31+nmu1) 설정하는 중입니다 ...
+Processing triggers for systemd (215-17+deb8u1) ...
+root@localhost:/home/westporch# 
+{% endhighlight %}
+
+
+2.디스크 정보 조회
+-------------------
+
+**fdisk -l** 명령어로 디스크의 장치 이름을 확인합니다.
+
+장치 이름은 /dev/sda입니다.
+
+{% highlight sh %}
+root@localhost:/home/westporch# fdisk -l
+
+Disk /dev/sda: 119.2 GiB, 128035676160 bytes, 250069680 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0x2b84333b
+
+Device     Boot    Start       End   Sectors   Size Id Type
+/dev/sda1  *        2048    206847    204800   100M  7 HPFS/NTFS/exFAT
+/dev/sda2       31459328 250066943 218607616 104.2G  7 HPFS/NTFS/exFAT
+/dev/sda3         208894  31459327  31250434  14.9G  5 Extended
+/dev/sda5         208896  30085119  29876224  14.3G 83 Linux
+/dev/sda6       30087168  31459327   1372160   670M 82 Linux swap / Solaris
+
+Partition table entries are not in disk order.
+root@localhost:/home/westporch# 
+{% endhighlight %}
+
+**hdparm -I '장치 이름'** 명령으로 디스크 정보를 확인합니다.
+
+{% highlight sh %}
+root@localhost:/home/westporch# hdparm -I /dev/sda
+
+/dev/sda:
+
+ATA device, with non-removable media
+        Model Number:       LITEONIT LMT-128M3M                     
+        Serial Number:      002228119217        
+        Firmware Revision:  VYJ4    
+        Transport:          Serial, ATA8-AST, SATA II Extensions, SATA Rev 2.6, SATA Rev 3.0
+Standards:
+        Used: ATA/ATAPI-7 T13 1532D revision 4a 
+        Supported: 8 7 6 5 & some of 8
+Configuration:
+        Logical         max     current
+        cylinders       16383   16383
+        heads           16      16
+        sectors/track   63      63
+        --
+        CHS current addressable sectors:   16514064
+        LBA    user addressable sectors:  250069680
+        LBA48  user addressable sectors:  250069680
+        Logical  Sector size:                   512 bytes
+        Physical Sector size:                   512 bytes
+        device size with M = 1024*1024:      122104 MBytes
+        device size with M = 1000*1000:      128035 MBytes (128 GB)
+        cache/buffer size  = unknown
+        Nominal Media Rotation Rate: Solid State Device
+Capabilities:
+        LBA, IORDY(can be disabled)
+        Queue depth: 32
+        Standby timer values: spec'd by Standard, no device specific minimum
+        R/W multiple sector transfer: Max = 16  Current = 1
+        DMA: mdma0 mdma1 mdma2 udma0 udma1 udma2 udma3 udma4 udma5 *udma6 
+             Cycle time: min=120ns recommended=120ns
+        PIO: pio0 pio1 pio2 pio3 pio4 
+             Cycle time: no flow control=120ns  IORDY flow control=120ns
+Commands/features:
+        Enabled Supported:
+           *    SMART feature set
+                Security Mode feature set
+           *    Power Management feature set
+           *    Write cache
+           *    Look-ahead
+           *    Host Protected Area feature set
+           *    WRITE_BUFFER command
+           *    READ_BUFFER command
+           *    DOWNLOAD_MICROCODE
+                SET_MAX security extension
+           *    48-bit Address feature set
+           *    Device Configuration Overlay feature set
+           *    Mandatory FLUSH_CACHE
+           *    FLUSH_CACHE_EXT
+           *    SMART error logging
+           *    SMART self-test
+           *    General Purpose Logging feature set
+           *    64-bit World wide name
+           *    Segmented DOWNLOAD_MICROCODE
+           *    Gen1 signaling speed (1.5Gb/s)
+           *    Gen2 signaling speed (3.0Gb/s)
+           *    Gen3 signaling speed (6.0Gb/s)
+           *    Native Command Queueing (NCQ)
+           *    Host-initiated interface power management
+           *    Phy event counters
+           *    DMA Setup Auto-Activate optimization
+                Device-initiated interface power management
+           *    Software settings preservation
+           *    SMART Command Transport (SCT) feature set
+           *    SCT Write Same (AC2)
+           *    SCT Error Recovery Control (AC3)
+           *    SCT Features Control (AC4)
+           *    SCT Data Tables (AC5)
+           *    Data Set Management TRIM supported (limit 8 blocks)
+Security: 
+                supported
+        not     enabled
+        not     locked
+        not     frozen
+        not     expired: security count
+                supported: enhanced erase
+        6min for SECURITY ERASE UNIT. 6min for ENHANCED SECURITY ERASE UNIT. 
+Logical Unit WWN Device Identifier: 5000000000000000
+        NAA             : 5
+        IEEE OUI        : 000000
+        Unique ID       : 000000000
+Checksum: correct
+root@localhost:/home/westporch#
+{% endhighlight %}
