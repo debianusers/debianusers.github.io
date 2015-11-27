@@ -95,3 +95,25 @@ Mem:          7.6G       2.7G       4.9G       316M        44M       875M
 Swap:         669M         0B       669M
 root@localhost:/home/westporch#
 {% endhighlight %}
+
+
+# 3. CPU stress
+
+CPU의 최대 코어 개수 만큼 stress 테스트를 해보겠습니다.
+
+CPU의 코어 개수는 다음 명령어로 확인합니다.
+
+제가 사용하는 CPU(Intel(R) Core(TM) i5-3317U CPU @ 1.70GHz)는 코어가 4개입니다.
+{% highlight ruby %}
+root@localhost:/home/westporch# cat /proc/cpuinfo | grep -c processor
+4
+root@localhost:/home/westporch# 
+{% endhighlight %}
+
+
+CPU의 코어 4개를 stress 테스트합니다. --cpu 옵션은 -c 옵션과 동일합니다.
+{% highlight ruby %}
+root@localhost:/home/westporch# stress --cpu 4
+stress: info: [4768] dispatching hogs: 4 cpu, 0 io, 0 vm, 0 hdd
+
+{% endhighlight %}
