@@ -6,8 +6,7 @@ author: <a href="mailto:westporch@gmail.com">Westporch</a>
 
 stress 명령어를 통해 시스템에 과부하를 줄 수 있습니다. 이를 통해 안정성을 테스트해볼 수 있습니다.
 
-1.stress 설치
---------------------------
+# 1. stress 설치
 
 {% highlight sh %}
 root@localhost:/home/westporch# apt-get install stress
@@ -31,8 +30,7 @@ stress (1.0.1-1) 설정하는 중입니다 ...
 root@localhost:/home/westporch#
 {% endhighlight %}
 
-2.메모리 stress
----------------
+# 2.메모리 stress
 
 {% highlight ruby %}
 root@localhost:/home/westporch# stress --vm 3 --vm-bytes 1024M
@@ -46,10 +44,10 @@ stress: info: [3415] dispatching hogs: 0 cpu, 0 io, 3 vm, 0 hdd
 |--vm-bytes '할당할 크기'|할당할 메모리 크기는 --vm-bytes 옵션으로 결정합니다. 이 옵션을 지정하지 않으면 기본값은 256MB입니다.|
 
 
-2-(1).메모리 stress 작동 여부 확인
------------------------------
+## 2-(1).메모리 stress 작동 여부 확인
 
-**ps aux | grep stress**
+
+### 1) ps aux | grep stress
 
 _1050888_KB / 1024= 1026MB
 
@@ -66,7 +64,7 @@ root      3423  0.0  0.0   4368  2148 pts/2    S+   11:17   0:00 grep stress
 root@localhost:/home/westporch# 
 {% endhighlight %}
 
-**pstree -p**
+### 2) pstree -p
 
 **stress --vm 3 --vm-bytes 1024M** 명령으로 프로세스 3416, 3417, 3418이 생성되었음을 확인할 수 있습니다.
 
@@ -86,7 +84,7 @@ systemd(1)─┬─ModemManager(618)─┬─{gdbus}(728)
 			..생략..
 {% endhighlight %}
 
-**free -hm**
+### 3) free -hm
 
 약 3.0GB의 메모리를 사용하고 있습니다.
 {% highlight ruby %}
