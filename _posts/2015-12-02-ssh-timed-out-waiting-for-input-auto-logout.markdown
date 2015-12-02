@@ -4,7 +4,6 @@ title: "ssh - timed out waiting for input: auto-logout 문제 해결하기"
 author: <a href="mailto:westporch@gmail.com">Westporch</a>
 ---
 
-이 문서를 샘플 문서 양식입니다.
 
 # 1. TMOUT 쉘 변수 확인
 
