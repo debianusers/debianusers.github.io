@@ -7,9 +7,10 @@ author: <a href="mailto:westporch@gmail.com">Westporch</a>
 # 1. NCurses 다운
 
 ftp://ftp.gnu.org/pub/gnu/ncurses/ 에서 최신 버전의 NCurses를 다운받습니다.
+
 2015.12.27 기준으로 최신 버전인 [ncurses-6.0](ftp://ftp.gnu.org/pub/gnu/ncurses/ncurses-6.0.tar.gz)을 설치하겠습니다.
 
-{% highlight ruby %}
+{% highlight sh %}
 root@RaspberryPi:~/Downloads# wget ftp://ftp.gnu.org/pub/gnu/ncurses/ncurses-6.0.tar.gz
 --2015-12-27 14:47:12--  ftp://ftp.gnu.org/pub/gnu/ncurses/ncurses-6.0.tar.gz
            => ‘ncurses-6.0.tar.gz’
@@ -32,7 +33,8 @@ root@RaspberryPi:~/Downloads# wget ftp://ftp.gnu.org/pub/gnu/ncurses/ncurses-6.0
 # 2. NCurses 설치
 
 다운 받은 ncurses 파일의 압축을 해제합니다.
-{% highlight ruby %}
+
+{% highlight sh %}
 root@RaspberryPi:~/Downloads# ls
 ncurses-6.0.tar.gz
 root@RaspberryPi:~/Downloads# tar zxvf ncurses-6.0.tar.gz
@@ -42,7 +44,8 @@ root@RaspberryPi:~/Downloads#
 {% endhighlight %}
 
 압축을 해제한 ncurses-6.0 폴더로 이동합니다.
-{% highlight ruby %}
+
+{% highlight sh %}
 root@RaspberryPi:~/Downloads# cd ncurses-6.0
 root@RaspberryPi:~/Downloads/ncurses-6.0#
 {% endhighlight %}
@@ -50,7 +53,7 @@ root@RaspberryPi:~/Downloads/ncurses-6.0#
 
 ## 2-(1). ./configure
 
-{% highlight ruby %}
+{% highlight sh %}
 root@RaspberryPi:~/Downloads/ncurses-6.0# ./configure
 (...생략...)
 Appending rules for normal model (form: ticlib+termlib+ext_tinfo+base+ext_funcs)
@@ -75,7 +78,7 @@ root@RaspberryPi:~/Downloads/ncurses-6.0#
 
 ## 2-(2). make
 
-{% highlight ruby %}
+{% highlight sh %}
 root@RaspberryPi:~/Downloads/ncurses-6.0# make
 make[1]: Leaving directory '/root/Downloads/ncurses-6.0/misc'
 root@RaspberryPi:~/Downloads/ncurses-6.0#
@@ -84,7 +87,7 @@ root@RaspberryPi:~/Downloads/ncurses-6.0#
 
 ## 2-(3). make install
 
-{% highlight ruby %}
+{% highlight sh %}
 root@RaspberryPi:~/Downloads/ncurses-6.0# make install
 installing std
 installing stdcrt
@@ -102,7 +105,7 @@ NCurses 라이브러리를 이용하여 Hello World를 출력하는 프로그램
 ## 3-(1). Hello World 프로그램
 
 vi hello.c
-{% highlight ruby %}
+{% highlight sh %}
 root@RaspberryPi:~/NCurses# vi hello.c
 {% endhighlight %}
 
@@ -126,14 +129,14 @@ int main()
 
 ## 3-(2). 컴파일
 
-{% highlight ruby %}
+{% highlight sh %}
 root@RaspberryPi:~/NCurses# gcc -o hello hello.c -lncurses
 root@RaspberryPi:~/NCurses# 
 {% endhighlight %}
 
 ## 3-(3). 실행
 
-{% highlight ruby %}
+{% highlight sh %}
 root@RaspberryPi:~/NCurses# ls
 hello  hello.c
 root@RaspberryPi:~/NCurses# ./hello
@@ -141,6 +144,6 @@ root@RaspberryPi:~/NCurses# ./hello
 
 *hello* 파일을 실행하면 Hello World가 출력됩니다.
 
-{% highlight ruby %}
+{% highlight sh %}
 Hello World
 {% endhighlight %}
