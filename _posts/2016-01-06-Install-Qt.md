@@ -26,6 +26,6 @@ westporch@localhost:~/Downloads$ chmod u+x qt-opensource-linux-x86-5.5.1.bin
 
 .bin 파일을 실행하면 설치가 진행됩니다.
 
-{% highlight ruby %}
+{% highlight sh %}
 westporch@localhost:~/Downloads$ ./qt-opensource-linux-x86-5.5.1.bin
 {% endhighlight %}
