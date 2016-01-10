@@ -7,7 +7,7 @@ author: <a href="mailto:westporch@gmail.com">Westporch</a>
 
 # 1. Flash plugin 다운
 
-http://ftp.uk.debian.org/debian/pool/contrib/p/pepperflashplugin-nonfree/ 에서 pepperflashplugin-nonfree(deb 파일) 최신 버전을 다운 받습니다.
+[ttp://ftp.uk.debian.org/debian/pool/contrib/p/pepperflashplugin-nonfree/](http://ftp.uk.debian.org/debian/pool/contrib/p/pepperflashplugin-nonfree/) 에서 pepperflashplugin-nonfree(deb 파일) 최신 버전을 다운 받습니다.
 
 {% highlight sh %}
 root@localhost:/home/westporch/Downloads# http://ftp.uk.debian.org/debian/pool/contrib/p/pepperflashplugin-nonfree/pepperflashplugin-nonfree_1.8.2_i386.deb
@@ -63,6 +63,6 @@ root@localhost:/home/westporch/Downloads#
 
 실행 중인 Chromium을 모두 종료한 뒤에 Chromium을 재시작합니다.
 
-주소 창에 *chrome://plugins*를 입력합니다.
+주소 창에 [chrome://plugins](chrome://plugins)를 입력합니다.
 
 plugins 항목에 *Adobe Flash Player*가 보이면 플러그인이 제대로 설치된 것입니다.
