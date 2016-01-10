@@ -9,32 +9,45 @@ author: <a href="mailto:westporch@gmail.com">Westporch</a>
 # 1. Title1
 
 
-{% highlight ruby %}
+{% highlight sh %}
 
 {% endhighlight %}
 
 
-{% highlight ruby %}
+{% highlight sh %}
+
+{% endhighlight %}
+
+
+{% highlight sh %}
+
+{% endhighlight %}
+
+
+{% highlight sh %}
 
 {% endhighlight %}
 
 ## Title2
-{% highlight ruby %}
+{% highlight sh %}
 
 {% endhighlight %}
 
 
-{% highlight ruby %}
+{% highlight sh %}
 
 {% endhighlight %}
 
 ### Title3
-{% highlight ruby %}
+{% highlight sh %}
 
 {% endhighlight %}
 
 
-{% highlight ruby %}
+{% highlight sh %}
 
 {% endhighlight %}
 
+*기울인 글씨*
+**굵은 글씨**
+[네이버](http://naver.com)
