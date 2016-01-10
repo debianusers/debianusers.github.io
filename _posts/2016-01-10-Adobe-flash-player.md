@@ -62,5 +62,7 @@ root@localhost:/home/westporch/Downloads#
 # 3. Flash plugin 설치 확인
 
 실행 중인 Chromium을 모두 종료한 뒤에 Chromium을 재시작합니다.
+
 주소 창에 *chrome://plugins*를 입력합니다.
+
 plugins 항목에 *Adobe Flash Player*가 보이면 플러그인이 제대로 설치된 것입니다.
