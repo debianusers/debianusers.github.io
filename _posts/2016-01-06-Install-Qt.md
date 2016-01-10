@@ -7,7 +7,7 @@ author: <a href="mailto:westporch@gmail.com">Westporch</a>
 
 # 1. Qt 다운로드
 
-https://download.qt.io/official_releases/qt 에서 최신 Qt를 다운받습니다.
+[https://download.qt.io/official_releases/qt](https://download.qt.io/official_releases/qt) 에서 최신 Qt를 다운받습니다.
 
 {% highlight sh %}
 westporch@localhost:~/Downloads$ wget https://download.qt.io/official_releases/qt/5.5/5.5.1/qt-opensource-linux-x86-5.5.1.run
