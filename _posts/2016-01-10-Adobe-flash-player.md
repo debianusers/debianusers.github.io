@@ -7,7 +7,7 @@ author: <a href="mailto:westporch@gmail.com">Westporch</a>
 
 # 1. Flash plugin 다운
 
-[ttp://ftp.uk.debian.org/debian/pool/contrib/p/pepperflashplugin-nonfree/](http://ftp.uk.debian.org/debian/pool/contrib/p/pepperflashplugin-nonfree/) 에서 pepperflashplugin-nonfree(deb 파일) 최신 버전을 다운 받습니다.
+[http://ftp.uk.debian.org/debian/pool/contrib/p/pepperflashplugin-nonfree/](http://ftp.uk.debian.org/debian/pool/contrib/p/pepperflashplugin-nonfree/) 에서 pepperflashplugin-nonfree(deb 파일) 최신 버전을 다운 받습니다.
 
 {% highlight sh %}
 root@localhost:/home/westporch/Downloads# http://ftp.uk.debian.org/debian/pool/contrib/p/pepperflashplugin-nonfree/pepperflashplugin-nonfree_1.8.2_i386.deb
