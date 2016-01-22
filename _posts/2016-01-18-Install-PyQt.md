@@ -234,4 +234,4 @@ root@localhost:/home/westporch/Downloads/PyQt-x11-gpl-4.11.4/examples/widgets#
 root@localhost:/home/westporch/Downloads/PyQt-x11-gpl-4.11.4/examples/widgets# python digitalclock.py 
 {% endhighlight %}
 
-![alt text](https://lh3.googleusercontent.com/-aGZGqIQzsOE/VqIkS9jwmkI/AAAAAAAACUk/i84ytILtUlc/s151-Ic42/PyQt_Digitalclock.png "PyQt로 실행한 GUI 화면")
+![digitalclock](https://lh3.googleusercontent.com/-aGZGqIQzsOE/VqIkS9jwmkI/AAAAAAAACUk/i84ytILtUlc/s151-Ic42/PyQt_Digitalclock.png "PyQt로 실행한 GUI 화면")
