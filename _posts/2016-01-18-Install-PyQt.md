@@ -4,13 +4,11 @@ title: "PyQt 설치하기"
 author: <a href="mailto:westporch@gmail.com">Westporch</a>
 ---
 
-[python-qt4](https://packages.debian.org/jessie/python-qt4)는 Python으로 [Qt4](http://zetcode.com/gui/qt4/) API를 구현한 것입니다.
-
 # 1. sip 설치
 
-[SIP](https://riverbankcomputing.com/software/sip/download)을 다운받은 뒤 압축을 해제합니다.
+[PyQt](https://riverbankcomputing.com/software/pyqt/intro)를 설치하기 전에 [SIP](https://riverbankcomputing.com/software/sip/download)을 먼저 설치해야합니다.
 
-저는 [sip-4.17](http://sourceforge.net/projects/pyqt/files/sip/sip-4.17/sip-4.17.tar.gz)로 설치했습니다.
+저는 [sip-4.17.tar.gz](http://sourceforge.net/projects/pyqt/files/sip/sip-4.17/sip-4.17.tar.gz)로 설치했습니다.
 
 ## 1-(1). python configure.py
 
@@ -35,7 +33,7 @@ Creating sip module Makefile...
 
 ## 1-(2). make
 
-**make**를 입력합니다.
+**make**를 실행합니다.
 
 {% highlight sh %}
 root@localhost:/home/westporch/Downloads/sip-4.17# make
@@ -57,14 +55,14 @@ siplib.c:20:20: fatal error: Python.h: 그런 파일이나 디렉터리가 없�
             ^
 compilation terminated.
 Makefile:29: recipe for target 'siplib.o' failed
-make[1]: \*\*\* [siplib.o] Error 1
+make[1]:  [siplib.o] Error 1
 make[1]: Leaving directory '/home/westporch/Downloads/sip-4.17/siplib'
 Makefile:3: recipe for target 'all' failed
-make: \*\*\* [all] Error 2
+make:  [all] Error 2
 root@localhost:/home/westporch/Downloads/sip-4.17# 
 {% endhighlight %}
 
-만약 위와같은 메시지가 발생하면 **apt-get install python-dev**를 입력합니다.
+만약 위와같은 메시지가 발생하면 *python-dev*를 설치합니다. (**apt-get install python-dev**)
 
 {% highlight sh %}
 root@localhost:/home/westporch/Downloads/sip-4.17# apt-get install python-dev
@@ -95,7 +93,7 @@ Preparing to unpack .../libpython2.7-dev_2.7.9-2_i386.deb ...
 (..이하 생략..)
 {% endhighlight %}
 
-python-dev 설치가 끝나면 다시 **make**를 합니다.
+python-dev 설치가 끝나면 다시 **make**를 실행합니다.
 
 {% highlight sh %}
 root@localhost:/home/westporch/Downloads/sip-4.17# make
@@ -119,7 +117,7 @@ root@localhost:/home/westporch/Downloads/sip-4.17#
 
 ## 1-(3). make install
 
-**make install**을 입력합니다.
+**make install**을 실행합니다.
 
 {% highlight sh %}
 root@localhost:/home/westporch/Downloads/sip-4.17# make install
@@ -144,6 +142,8 @@ root@localhost:/home/westporch/Downloads/sip-4.17#
 저는 [PyQt-x11-gpl-4.11.4.tar.gz](http://sourceforge.net/projects/pyqt/files/PyQt4/PyQt-4.11.4/PyQt-x11-gpl-4.11.4.tar.gz) 버전으로 설치하겠습니다.
 
 ## 2-(1). python configure.py
+
+**python configure.py**을 실행하고 *yes*를 입력합니다.
 
 {% highlight sh %}
 root@localhost:/home/westporch/Downloads/PyQt-x11-gpl-4.11.4# python configure.py
@@ -197,6 +197,7 @@ README          calendarwidget.py  groupbox.py     lineedits.py  shapedclock.py 
 analogclock.py  charactermap.py    icons           movie         sliders.py      stylesheet  wiggly.py
 calculator.py   digitalclock.py    imageviewer.py  scribble.py   spinboxes.py    tetrix.py   windowflags.py
 root@localhost:/home/westporch/Downloads/PyQt-x11-gpl-4.11.4/examples/widgets# 
+{% endhighlight %}
 
 **python digitalclock.py**를 실행했을 때 GUI 화면이 나타나면 PyQt가 제대로 설치된 것입니다.
 
@@ -204,14 +205,14 @@ root@localhost:/home/westporch/Downloads/PyQt-x11-gpl-4.11.4/examples/widgets#
 
 아래와 같은 메시지가 출력되면서 PyQt의 GUI 화면이 나타나지 않는 경우가 있습니다.
 
-{% endhighlight %}
+{% highlight sh %}
 root@localhost:/home/westporch/Downloads/PyQt-x11-gpl-4.11.4/examples/widgets# python digitalclock.py 
 No protocol specified
 digitalclock.py: cannot connect to X server :0
 root@localhost:/home/westporch/Downloads/PyQt-x11-gpl-4.11.4/examples/widgets#
-{% highlight sh %}
+{% endhighlight %}
 
-이럴때는 **su** 명령을 사용하기 전에 **xhost +**를 먼저 입력해야 합니다. 아래 화면을 참고해주세요.
+이럴 때는 **su** 명령을 사용하기 전에 **xhost +**를 먼저 입력해야 합니다. 아래 화면을 참고해주세요.
 
 {% endhighlight %}
 westporch@localhost:~$ xhost +
@@ -223,4 +224,4 @@ root@localhost:/home/westporch# cd /home/westporch/Downloads/PyQt-x11-gpl-4.11.4
 root@localhost:/home/westporch/Downloads/PyQt-x11-gpl-4.11.4/examples/widgets# 
 root@localhost:/home/westporch/Downloads/PyQt-x11-gpl-4.11.4/examples/widgets# python digitalclock.py 
 
-![alt text]((https://lh3.googleusercontent.com/-aGZGqIQzsOE/VqIkS9jwmkI/AAAAAAAACUk/i84ytILtUlc/s151-Ic42/PyQt_Digitalclock.png "PyQt로 실행한 GUI 화면")
+![alt text](https://lh3.googleusercontent.com/-aGZGqIQzsOE/VqIkS9jwmkI/AAAAAAAACUk/i84ytILtUlc/s151-Ic42/PyQt_Digitalclock.png "PyQt로 실행한 GUI 화면")
