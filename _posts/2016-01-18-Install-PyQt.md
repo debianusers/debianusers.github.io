@@ -203,7 +203,8 @@ root@localhost:/home/westporch/Downloads/PyQt-x11-gpl-4.11.4/examples/widgets#
 
 # 4. Qt Designer 설치
 
-[Qt Designer](http://doc.qt.io/qt-4.8/designer-manual.html)는 
+[Qt Designer](http://doc.qt.io/qt-4.8/designer-manual.html)는 GUI 환경을 디자인하는데 도움을 줍니다. **apt-get install qt4-designer**을 실행하여 Qt Designer를 설치합니다.
+
 {% highlight sh %}
 root@localhost:/home/westporch# apt-get install qt4-designer
 {% endhighlight %}
