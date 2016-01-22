@@ -201,6 +201,14 @@ root@localhost:/home/westporch/Downloads/PyQt-x11-gpl-4.11.4/examples/widgets#
 
 **python digitalclock.py**를 실행했을 때 GUI 화면이 나타나면 PyQt가 제대로 설치된 것입니다.
 
+# 4. Qt Designer 설치
+
+[Qt Designer](http://doc.qt.io/qt-4.8/designer-manual.html)는 
+{% highlight sh %}
+root@localhost:/home/westporch# apt-get install qt4-designer
+{% endhighlight %}
+
+
 ## 3-(1). cannot connect to X server :0 메시지가 발생할 경우
 
 아래와 같은 메시지가 출력되면서 PyQt의 GUI 화면이 나타나지 않는 경우가 있습니다.
@@ -214,7 +222,7 @@ root@localhost:/home/westporch/Downloads/PyQt-x11-gpl-4.11.4/examples/widgets#
 
 이럴 때는 **su** 명령을 사용하기 전에 **xhost +**를 먼저 입력해야 합니다. 아래 화면을 참고해주세요.
 
-{% endhighlight %}
+{% highlight %}
 westporch@localhost:~$ xhost +
 access control disabled, clients can connect from any host
 westporch@localhost:~$ su root
@@ -223,5 +231,6 @@ root@localhost:/home/westporch#
 root@localhost:/home/westporch# cd /home/westporch/Downloads/PyQt-x11-gpl-4.11.4/examples/widgets
 root@localhost:/home/westporch/Downloads/PyQt-x11-gpl-4.11.4/examples/widgets# 
 root@localhost:/home/westporch/Downloads/PyQt-x11-gpl-4.11.4/examples/widgets# python digitalclock.py 
+{% endhighlight %}
 
 ![alt text](https://lh3.googleusercontent.com/-aGZGqIQzsOE/VqIkS9jwmkI/AAAAAAAACUk/i84ytILtUlc/s151-Ic42/PyQt_Digitalclock.png "PyQt로 실행한 GUI 화면")
