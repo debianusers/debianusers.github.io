@@ -51,3 +51,6 @@ author: <a href="mailto:westporch@gmail.com">Westporch</a>
 *기울인 글씨*
 **굵은 글씨**
 [네이버](http://naver.com)
+
+이미지 추가하기
+![alt text](http://img.naver.net/static/www/u/2013/0731/nmms_224940510.gif "이미지에 마우스를 올리면 이 설명이 보입니다.")
