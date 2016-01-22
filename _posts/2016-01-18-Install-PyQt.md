@@ -6,7 +6,7 @@ author: <a href="mailto:westporch@gmail.com">Westporch</a>
 
 # 1. SIP 설치
 
-[PyQt](https://riverbankcomputing.com/software/pyqt/intro)를 설치하기 전에 [SIP](https://riverbankcomputing.com/software/sip/download)을 먼저 설치해야합니다.
+[PyQt](https://riverbankcomputing.com/software/pyqt/intro)를 설치하기 전에 [SIP](https://riverbankcomputing.com/software/sip/download)를 먼저 설치해야합니다.
 
 저는 [sip-4.17.tar.gz](http://sourceforge.net/projects/pyqt/files/sip/sip-4.17/sip-4.17.tar.gz)로 설치했습니다.
 
