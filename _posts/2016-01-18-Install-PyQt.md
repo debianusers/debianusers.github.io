@@ -223,7 +223,7 @@ root@localhost:/home/westporch/Downloads/PyQt-x11-gpl-4.11.4/examples/widgets#
 
 이럴 때는 **su** 명령을 사용하기 전에 **xhost +**를 먼저 입력해야 합니다. 아래 화면을 참고해주세요.
 
-{% highlight %}
+{% highlight sh %}
 westporch@localhost:~$ xhost +
 access control disabled, clients can connect from any host
 westporch@localhost:~$ su root
