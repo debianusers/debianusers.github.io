@@ -4,7 +4,7 @@ title: "PyQt 설치하기"
 author: <a href="mailto:westporch@gmail.com">Westporch</a>
 ---
 
-# 1. sip 설치
+# 1. SIP 설치
 
 [PyQt](https://riverbankcomputing.com/software/pyqt/intro)를 설치하기 전에 [SIP](https://riverbankcomputing.com/software/sip/download)을 먼저 설치해야합니다.
 
