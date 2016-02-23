@@ -54,5 +54,5 @@ author: <a href="mailto:westporch@gmail.com">Westporch</a>
 
 [네이버로 연결](http://naver.com)
 
-이미지 추가하기
+이미지 첨부:
 ![alt text](http://img.naver.net/static/www/u/2013/0731/nmms_224940510.gif "이미지에 마우스를 올리면 이 설명이 보입니다.")
