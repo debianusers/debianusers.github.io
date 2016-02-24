@@ -66,11 +66,13 @@ iroot@localhost:/home/westporch# git clone https://github.com/debianusers/debian
 
 ![alt text](https://lh3.googleusercontent.com/-fi2IKiTjaXk/Vs0PIBrKQfI/AAAAAAAACeA/AWrS-F-u3js/s512-Ic42/4-%2525281%252529.%252520%2525EB%2525AC%2525B8%2525EC%252584%25259C%252520%2525EC%252583%25259D%2525EC%252584%2525B1_2016_02_24_10_02_26_14.png "마크다운 문서를 생성하는 모습")
 
+매번 마크다운 문서를 작성하기가 번거로워서 [문서 양식](https://raw.githubusercontent.com/debianusers/debianusers.github.io/master/_posts/2015-01-01-welcome-to-debianusers.markdown)을 만들었습니다. 파일 이름은 원하는 이름으로 바꾸면됩니다.
+
 ## 2-(2). 마크다운 문서 편집
 
 ![alt text](https://lh3.googleusercontent.com/-t86hm6mXutw/Vs0PJKDdkOI/AAAAAAAACeA/AYpt0jjU4Wc/s512-Ic42/4-%2525282%252529.%252520%2525EB%2525AC%2525B8%2525EC%252584%25259C%252520%2525EC%252597%252585%2525EB%2525A1%25259C%2525EB%252593%25259C_2016_02_24_10_03_40_61.png "마크다운 문서를 편집하는 모습")
 
-매번 마크다운 문서를 작성하기가 번거로워서 [문서 양식](https://raw.githubusercontent.com/debianusers/debianusers.github.io/master/_posts/2015-01-01-welcome-to-debianusers.markdown)을 만들었습니다. 이 양식을 복사해서 **title, author, 내용**을 바꾸면 됩니다.
+[문서 양식](https://raw.githubusercontent.com/debianusers/debianusers.github.io/master/_posts/2015-01-01-welcome-to-debianusers.markdown)을 바탕으로 작업할 때 **title, author, 내용**을 바꾸면 됩니다.
 
 마크다운 문서 작성이 끝나면 작성한 파일을 [repository](https://github.com/debianusers/debianusers.github.io.git)에 반영해야 합니다.
 
