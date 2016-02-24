@@ -74,13 +74,13 @@ iroot@localhost:/home/westporch# git clone https://github.com/debianusers/debian
 
 마크다운 문서 작성이 끝나면 작성한 파일을 [repository](https://github.com/debianusers/debianusers.github.io.git)에 반영해야 합니다.
 
-**git add 파일명**
+> **git add 파일명**
 
-**git status**
+> **git status**
 
-**git commit -m "설명"**
+> **git commit -m "설명"**
 
-**git push**
+> **git push**
 
 [git 간편 안내서](https://rogerdudler.github.io/git-guide/index.ko.html)를 참고하시면 도움이 될 것입니다.
 
