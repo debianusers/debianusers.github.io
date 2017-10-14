@@ -4,6 +4,13 @@
   {% include head.html %}
   {% include analytics.html %}
 
+  <!-- 네이버 검색엔진에서 debianusers.github.io의 검색을 제외함. 
+       참고: https://help.naver.com/support/contents/contents.nhn?serviceNo=606&categoryNo=15564&contentsNo=11644&interactiveMainNo=19690
+  -->
+  <head>
+    <meta name="robots" content="noindex">
+  </head>
+
   <body>
 
     {% include header.html %}
